@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracechurch Weekly People Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Gracechurch Weekly People Search</h1>
+        </div>
+        <div class="search-container">
+            <div class="search-input-group">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search newsletters (min 3 characters)...">
+            </div>
+            <div class="date-inputs">
+                <div class="date-input-group">
+                    <i class="fas fa-calendar-alt date-icon"></i>
+                    <input type="date" id="fromDateInput">
+                </div>
+                <div class="date-input-group">
+                    <i class="fas fa-calendar-alt date-icon"></i>
+                    <input type="date" id="toDateInput">
+                </div>
+            </div>
+            <button id="searchButton">
+                <i class="fas fa-search"></i>
+                <span>Search</span>
+            </button>
+        </div>
+        
+        <div id="loadingIndicator" class="loading">
+            <div class="spinner"></div>
+            <div>Searching newsletters...</div>
+        </div>
+        
+        <div id="errorMessage" class="error"></div>
+        <div id="noResultsMessage" class="no-results">No results found for your search</div>
+        
+        <div id="resultsContainer" class="results-container">
+            <div class="results-header">
+                <h2>Search Results</h2>
+                <span class="results-count" id="resultsCount"></span>
+            </div>
+            <div id="resultsList"></div>
+            
+            <!-- Pagination -->
+            <div id="paginationContainer" class="pagination"></div>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
