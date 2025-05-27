@@ -68,7 +68,7 @@ async function handleSearch(page = 1) {
 
         if (data.resultsCount > 0) {
             totalPages = data.totalPages || 1;
-            displayResults(data.results, data.query);
+            displayResults(data.results, data.query, data.resultsCount);
             updatePagination();
             resultsContainer.style.display = 'block';
         } else {
@@ -93,12 +93,12 @@ function highlightMatch(text, keyword) {
 }
 
 // Display results
-function displayResults(results, keyword) {
+function displayResults(results, keyword, resultsCount) {
     resultsList.innerHTML = '';
     
     // Update results count
-    const resultsCount = document.getElementById('resultsCount');
-    resultsCount.textContent = `${results.length} result${results.length !== 1 ? 's' : ''} found`;
+    const resultsCountElement = document.getElementById('resultsCount');
+    resultsCountElement.textContent = `${resultsCount} result${resultsCount !== 1 ? 's' : ''} found`;
 
     results.forEach(result => {
         const resultItem = document.createElement('div');
