@@ -10,7 +10,7 @@ const fromDateInput = document.getElementById('fromDateInput');
 const toDateInput = document.getElementById('toDateInput');
 
 // API endpoint
-const API_ENDPOINT = 'https://search-chimp-chi.vercel.app/api/search';
+const API_ENDPOINT = 'https://search-chimp-pi.vercel.app/api/search';
 
 // Search state
 let currentSearchTerm = '';
